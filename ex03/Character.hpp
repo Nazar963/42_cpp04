@@ -22,6 +22,6 @@ class Character : public ICharacter
 		void use(int idx, ICharacter& target);
 
 		~Character();
-}
+};
 
 #endif
