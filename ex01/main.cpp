@@ -6,17 +6,20 @@
 int main()
 {
 
-	const Animal*	loco[100];
+	// const Animal*	loco[100];
 
-	for (int i = 0; i < 50; i++)
-		loco[i] = new Dog();
-	for (int i = 50; i < 100; i++)
-		loco[i] = new Cat();
+	// for (int i = 0; i < 50; i++)
+	// 	loco[i] = new Dog();
+	// for (int i = 50; i < 100; i++)
+	// 	loco[i] = new Cat();
 	
-	for (int i = 0; i < 50; i++)
-		delete loco[i];
-	for (int i = 50; i < 100; i++)
-		delete loco[i];
+	// for (int i = 0; i < 50; i++)
+	// 	delete loco[i];
+	// for (int i = 50; i < 100; i++)
+	// 	delete loco[i];
+
+	Dog a;
+	Dog b(a);
 	
 	// const Animal* j = new Dog();
 	// const Animal* i = new Cat();

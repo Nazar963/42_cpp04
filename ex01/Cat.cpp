@@ -18,6 +18,7 @@ Cat& Cat::operator=(Cat const &other)
 	if (this != &other)
 	{
 		this->_type = other.type;
+		this->brain = new Brain(*other.brain);
 	}
 	return (*this);
 }
