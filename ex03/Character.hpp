@@ -10,6 +10,7 @@ class Character : public ICharacter
 	private:
 		AMateria* _materias[4];
 		std::string	_name;
+		static int	_index;
 	public:
 		Character();
 		Character(std::string name);

@@ -5,14 +5,19 @@
 
 class MateriaSource : public IMateriaSource
 {
+	private:
+		AMateria*	_materia[4];
+		std::string	_name;
 	public:
-		Character();
-		Character(std::string name);
-		Character(Character const &copy);
-		Character& operator=(Character const &other);
+		MateriaSource();
+		MateriaSource(std::string name);
+		MateriaSource(MateriaSource const &copy);
+		MateriaSource& operator=(MateriaSource const &other);
 
-		void learnMateria(AMateria*);
+		void learnMateria(AMateria* materia);
 		AMateria* createMateria(std::string const & type);
+
+		~MateriaSource();
 };
 
 #endif

@@ -1,19 +1,19 @@
 #include "Cure.hpp"
 
-Cure::Cure() : type("cure")
+Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure constructor" << std::endl;
+	// std::cout << "Cure constructor" << std::endl;
 }
 
-Cure::Cure(Cure const &copy)
+Cure::Cure(Cure const &copy) : AMateria(copy)
 {
-	std::cout << "Cure copy constructor" << std::endl;
+	// std::cout << "Cure copy constructor" << std::endl;
 	*this = copy;
 }
 
 Cure& Cure::operator=(Cure const &other)
 {
-	std::cout << "Cure assignment operator" << std::endl;
+	// std::cout << "Cure assignment operator" << std::endl;
 	if (this != &other)
 		this->type = other.type;
 	return (*this);
@@ -31,10 +31,10 @@ Cure* Cure::clone() const
 
 void	Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target << "'s wounds *"<< std::endl;
+	std::cout << "* heals " << target.getName() << "'s wounds *"<< std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor" << std::endl;
+	// std::cout << "Cure destructor" << std::endl;
 }
