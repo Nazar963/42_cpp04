@@ -18,14 +18,14 @@ int main()
 	// for (int i = 50; i < 100; i++)
 	// 	delete loco[i];
 
-	Dog a;
-	Dog b(a);
+	// Dog a;
+	// Dog b(a);
 	
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-	// delete j;//should not create a leak
-	// delete i;
+	delete j;//should not create a leak
+	delete i;
 
 	return 0;
 }

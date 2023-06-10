@@ -6,10 +6,10 @@ Cat::Cat() : _type("Cat")
 	this->brain = new Brain();
 }
 
-Cat::Cat(Cat const &copy) : Animal(copy)
+Cat::Cat(Cat const &copy) : Animal(copy) , _type(copy._type)
 {
 	std::cout << "Cat deep copy contructor" << std::endl;
-	*this = copy;
+	this->brain = new Brain(*copy.brain);
 }
 
 Cat& Cat::operator=(Cat const &other)
@@ -18,7 +18,6 @@ Cat& Cat::operator=(Cat const &other)
 	if (this != &other)
 	{
 		this->_type = other.type;
-		this->brain = new Brain(*other.brain);
 	}
 	return (*this);
 }

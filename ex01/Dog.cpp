@@ -6,10 +6,10 @@ Dog::Dog() : _type("Dog")
 	this->brain = new Brain();
 }
 
-Dog::Dog(Dog const &copy) : Animal(copy)
+Dog::Dog(Dog const &copy) : Animal(copy) , _type(copy._type)
 {
 	std::cout << "Dog deep copy contructor" << std::endl;
-	*this = copy;
+	this->brain = new Brain(*copy.brain);
 }
 
 Dog& Dog::operator=(Dog const &other)
@@ -18,7 +18,6 @@ Dog& Dog::operator=(Dog const &other)
 	if (this != &other)
 	{
 		this->_type = other.type;
-		this->brain = new Brain(*other.brain);
 	}
 	return (*this);
 }
